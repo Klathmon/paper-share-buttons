@@ -1,6 +1,3 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../paper-button/paper-button.html">
-
 <!--
 A paper share button for twitter
 
@@ -101,21 +98,7 @@ Example:
      * Concat the share url
      */
     computeUrl: function(href, text, user) {
-      if(!user || 0 === user.length) {
-        user = ''
-      }
-      else {
-        user = '&amp;via=' + user
-      }
-
-      if(!text || 0 === text.length) {
-        text = ''
-      }
-      else {
-        text = '&amp;text=' + text
-      }
-
-      return 'https://twitter.com/intent/tweet?url=' + href + text + user;
+      return 'https://twitter.com/intent/tweet?url=' + href;
     },
 
     /**
